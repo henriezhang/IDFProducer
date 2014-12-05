@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Maven: org.ansj:ansj_seg:0.9">
+    <CLASSES>
+      <root url="jar://E:/jar-packages/ansj_seg-0.9-modifiedv2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../ansj_seg-master/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../ansj_seg-master/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../ansj_seg-master/plug/ansj_lucene3_plug/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../ansj_seg-master/plug/ansj_lucene3_plug/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../ansj_seg-master/plug/ansj_lucene4_plug/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../ansj_seg-master/plug/ansj_lucene4_plug/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
