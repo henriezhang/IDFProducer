@@ -64,7 +64,8 @@
             <artifactId>ansj_seg</artifactId>
             <version>0.9</version>
             <scope>system</scope>
-            <systemPath>${homedir}\ansj_seg-0.9-modifiedv2.jar</systemPath>
+            <systemPath>D:/IdeaProjects/libs/ansj_seg-0.9.jar</systemPath>
+            <!--<systemPath>D:/IdeaProjects/libs/ansj_seg-0.9-modifiedv2.jar</systemPath>-->
         </dependency>
 
 
@@ -73,7 +74,7 @@
             <artifactId>tree-split</artifactId>
             <version>0.9</version>
             <scope>system</scope>
-            <systemPath>${homedir}\tree_split-1.0.1.jar</systemPath>
+            <systemPath>D:/IdeaProjects/libs/tree_split-1.0.1.jar</systemPath>
         </dependency>
 
 
