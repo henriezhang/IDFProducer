@@ -28,11 +28,8 @@ import java.io.IOException;
  */
 public class DocumentCounterJob extends Configured implements Tool
 {
-
-
     public static class DocumentCounterJobMapper extends Mapper<LongWritable, Text, Text, LongWritable>
     {
-
         private static Text KEY = new Text("key");
         private long count = 0;
 
@@ -49,9 +46,7 @@ public class DocumentCounterJob extends Configured implements Tool
         {
             context.write(KEY, new LongWritable(count));
         }
-
     }
-
 
     public static class DocumentCounterJobReducer extends Reducer<Text, LongWritable, Text, LongWritable>
     {
@@ -64,11 +59,9 @@ public class DocumentCounterJob extends Configured implements Tool
             {
                 sum += value.get();
             }
-
             context.write(new Text(""), new LongWritable(sum));
         }
     }
-
 
     @Override
     public int run(String[] args) throws Exception
@@ -81,19 +74,16 @@ public class DocumentCounterJob extends Configured implements Tool
             System.exit(2);
         }
 
-
         Job job = new Job(conf, "antyrao-Total Document Count");
         job.setJarByClass(this.getClass());
         job.setMapperClass(DocumentCounterJobMapper.class);
         job.setReducerClass(DocumentCounterJobReducer.class);
+        job.setNumReduceTasks(1);
+
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(LongWritable.class);
 
-
         job.setInputFormatClass(MultipleTextInputFormat.class);
-
-        job.setNumReduceTasks(1);
-
         FileInputFormat.setMaxInputSplitSize(job, 300 * 1024 * 1024L);
         FileInputFormat.setMinInputSplitSize(job, 200 * 1024 * 1024L);
 
